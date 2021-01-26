@@ -1,5 +1,5 @@
 
-## StarGAN v2 - Official PyTorch Implementation
+## Kbeauty Hairstyle Dataset Hackathon Baseline Model (StarGAN v2)
 
 <p align="left"><img width="95%" src="assets/teaser.jpg" /></p>
 
@@ -68,29 +68,6 @@ python main.py --mode sample --num_domains 2 --resume_iter 100000 --w_hpf 1 \
                --ref_dir assets/representative/celeba_hq/ref
 ```
 
-To transform a custom image, first crop the image manually so that the proportion of face occupied in the whole is similar to that of CelebA-HQ. Then, run the following command for additional fine rotation and cropping. All custom images in the `inp_dir` directory will be aligned and stored in the `out_dir` directory.
-
-```bash
-python main.py --mode align \
-               --inp_dir assets/representative/custom/female \
-               --out_dir assets/representative/celeba_hq/src/female
-```
-
-
-<p align="left"><img width="99%" src="assets/celebahq_interpolation.gif" /></p>
-
-
-<b>AFHQ.</b> To generate images and interpolation videos, run the following command:
-```bash
-python main.py --mode sample --num_domains 3 --resume_iter 100000 --w_hpf 0 \
-               --checkpoint_dir expr/checkpoints/afhq \
-               --result_dir expr/results/afhq \
-               --src_dir assets/representative/afhq/src \
-               --ref_dir assets/representative/afhq/ref
-```
-
-<p align="left"><img width="99%" src="assets/afhq_interpolation.gif" /></p>
-
 ## Evaluation metrics
 To evaluate StarGAN v2 using [Fr&eacute;chet Inception Distance (FID)](https://arxiv.org/abs/1706.08500) and [Learned Perceptual Image Patch Similarity (LPIPS)](https://arxiv.org/abs/1801.03924), run the following commands:
 
@@ -104,22 +81,6 @@ python main.py --mode eval --num_domains 2 --w_hpf 1 \
                --checkpoint_dir expr/checkpoints/celeba_hq \
                --eval_dir expr/eval/celeba_hq
 
-# afhq
-python main.py --mode eval --num_domains 3 --w_hpf 0 \
-               --resume_iter 100000 \
-               --train_img_dir data/afhq/train \
-               --val_img_dir data/afhq/val \
-               --checkpoint_dir expr/checkpoints/afhq \
-               --eval_dir expr/eval/afhq
-```
-
-Note that the evaluation metrics are calculated using random latent vectors or reference images, both of which are selected by the [seed number](https://github.com/clovaai/stargan-v2/blob/master/main.py#L35). In the paper, we reported the average of values from 10 measurements using different seed numbers. The following table shows the calculated values for both latent-guided and reference-guided synthesis.
-
-| Dataset <img width=50/> | <img width=15/> FID (latent) <img width=15/>  | <img width=10/> LPIPS (latent) <img width=10/> | <img width=5/> FID (reference) <img width=5/> | LPIPS (reference) | <img width=10/> Elapsed time <img width=10/>  |
-| :---------- | :------------: | :----: | :-----: | :----: | :----------:|
-| `celeba-hq` | 13.73 &pm; 0.06 | 0.4515 &pm; 0.0006  | 23.84  &pm; 0.03 | 0.3880 &pm; 0.0001 | 49min 51s
-| `afhq` | 16.18 &pm; 0.15 | 0.4501 &pm; 0.0007 | 19.78 &pm; 0.01 | 0.4315 &pm; 0.0002 | 64min 49s
-
 
 
 ## Training networks
@@ -131,20 +92,7 @@ python main.py --mode train --num_domains 2 --w_hpf 1 \
                --lambda_reg 1 --lambda_sty 1 --lambda_ds 1 --lambda_cyc 1 \
                --train_img_dir data/celeba_hq/train \
                --val_img_dir data/celeba_hq/val
-
-# afhq
-python main.py --mode train --num_domains 3 --w_hpf 0 \
-               --lambda_reg 1 --lambda_sty 1 --lambda_ds 2 --lambda_cyc 1 \
-               --train_img_dir data/afhq/train \
-               --val_img_dir data/afhq/val
 ```
-
-## Animal Faces-HQ dataset (AFHQ)
-
-<p align="left"><img width="99%" src="assets/afhq_dataset.jpg" /></p>
-
-We release a new dataset of animal faces, Animal Faces-HQ (AFHQ), consisting of 15,000 high-quality images at 512×512 resolution. The figure above shows example images of the AFHQ dataset. The dataset includes three domains of cat, dog, and wildlife, each providing about 5000 images. By having multiple (three) domains and diverse images of various breeds per each domain, AFHQ sets a challenging image-to-image translation problem. For each domain, we select 500 images as a test set and provide all remaining images as a training set. To download the dataset, run the following command:
-
 
 ```bash
 bash download.sh afhq-dataset
@@ -157,8 +105,8 @@ For business inquiries, please contact clova-jobs@navercorp.com.<br/>
 For technical and other inquires, please contact yunjey.choi@navercorp.com.
 
 
-## Citation
-If you find this work useful for your research, please cite our paper:
+## Reference
+If you want to get more details of the original model Stargan v2, this repository will be useful for your research:
 
 ```
 @inproceedings{choi2020starganv2,
@@ -168,6 +116,3 @@ If you find this work useful for your research, please cite our paper:
   year={2020}
 }
 ```
-
-## Acknowledgements
-We would like to thank the full-time and visiting Clova AI Research members for their valuable feedback and an early review: especially Seongjoon Oh, Junsuk Choe, Muhammad Ferjad Naeem, and Kyungjune Baek.
