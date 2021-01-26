@@ -1,0 +1,1 @@
+python main.py --mode train --img_size 512 --batch_size 5 --num_domains 2 --w_hpf 0 --lambda_reg 1 --lambda_sty 2 --lambda_ds 1 --lambda_cyc 2 --train_img_dir /mqset --val_img_dir /mqset --checkpoint_dir expr/checkpoints/kbeauty --eval_dir expr/eval --sample_dir expr/samples --dataset_dir datasets

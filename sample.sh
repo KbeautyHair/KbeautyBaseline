@@ -1,0 +1,1 @@
+python main.py --mode sample --img_size 512 --num_domains 2 --w_hpf 0 --checkpoint_dir expr/checkpoints/kbeauty --resume_iter 60000 --result_dir expr/results --trg_domain 1 --src_dir sample_images/src --ref_dir sample_images/ref
