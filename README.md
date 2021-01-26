@@ -12,13 +12,8 @@
 
 > **Abstract:** *A good image-to-image translation model should learn a mapping between different visual domains while satisfying the following properties: 1) diversity of generated images and 2) scalability over multiple domains. Existing methods address either of the issues, having limited diversity or multiple models for all domains. We propose StarGAN v2, a single framework that tackles both and shows significantly improved results over the baselines. Experiments on CelebA-HQ and a new animal faces dataset (AFHQ) validate our superiority in terms of visual quality, diversity, and scalability. To better assess image-to-image translation models, we release AFHQ, high-quality animal faces with large inter- and intra-domain variations. The code, pre-trained models, and dataset are available at clovaai/stargan-v2.*
 
-## Teaser video
-Click the figure to watch the teaser video. <br/>
-
-[![IMAGE ALT TEXT HERE](assets/youtube_video.jpg)](https://youtu.be/0EVh5Ki4dIY)
-
 ## TensorFlow implementation
-The TensorFlow implementation of StarGAN v2 by our team member junho can be found at [clovaai/stargan-v2-tensorflow](https://github.com/clovaai/stargan-v2-tensorflow).
+The TensorFlow implementation of StarGAN v2 by junho can be found at [clovaai/stargan-v2-tensorflow](https://github.com/clovaai/stargan-v2-tensorflow).
 
 ## Software installation
 Clone this repository:
@@ -48,18 +43,11 @@ bash download.sh pretrained-network-celeba-hq
 bash download.sh wing
 ```
 
-<b>AFHQ.</b> To download the [AFHQ](https://github.com/clovaai/stargan-v2/blob/master/README.md#animal-faces-hq-dataset-afhq) dataset and the pre-trained network, run the following commands:
-```bash
-bash download.sh afhq-dataset
-bash download.sh pretrained-network-afhq
-```
+## Translating images
+After downloading the pre-trained networks, you can synthesize output images reflecting diverse hairstyles of reference images. The following commands will save generated images to the `expr/results` directory. 
 
 
-## Generating interpolation videos
-After downloading the pre-trained networks, you can synthesize output images reflecting diverse styles (e.g., hairstyle) of reference images. The following commands will save generated images and interpolation videos to the `expr/results` directory. 
-
-
-<b>CelebA-HQ.</b> To generate images and interpolation videos, run the following command:
+<b>CelebA-HQ.</b> To generate images, run the following command:
 ```bash
 python main.py --mode sample --num_domains 2 --resume_iter 100000 --w_hpf 1 \
                --checkpoint_dir expr/checkpoints/celeba_hq \
