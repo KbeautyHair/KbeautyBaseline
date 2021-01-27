@@ -1,6 +1,3 @@
-
-### Kbeauty Hairstyle Dataset Hackathon Baseline Model
-
 ## Backbone model
 > **StarGAN v2: Diverse Image Synthesis for Multiple Domains**<br>
 > [Yunjey Choi](https://github.com/yunjey)\*, [Youngjung Uh](https://github.com/youngjung)\*, [Jaejun Yoo](http://jaejunyoo.blogspot.com/search/label/kr)\*, [Jung-Woo Ha](https://www.facebook.com/jungwoo.ha.921)<br>
