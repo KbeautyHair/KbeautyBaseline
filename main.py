@@ -141,7 +141,7 @@ if __name__ == '__main__':
                         help='Directory for saving generated images')
     parser.add_argument('--checkpoint_dir', type=str, default='expr/checkpoints/k-hairstyle',
                         help='Directory for saving network checkpoints')
-    parser.add_argument('--dataset_dir', type=str, default='datasets',
+    parser.add_argument('--dataset_dir', type=str, default='imagelists',
                         help='Directory of train, valid image lists (npy files)')
 
     # directory for calculating metrics
