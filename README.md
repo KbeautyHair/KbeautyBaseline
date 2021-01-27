@@ -1,13 +1,8 @@
 ## Backbone model
-> **StarGAN v2: Diverse Image Synthesis for Multiple Domains**<br>
+> **Paper**<br>
+> StarGAN v2: Diverse Image Synthesis for Multiple Domains https://arxiv.org/abs/1912.01865<br>
 > [Yunjey Choi](https://github.com/yunjey)\*, [Youngjung Uh](https://github.com/youngjung)\*, [Jaejun Yoo](http://jaejunyoo.blogspot.com/search/label/kr)\*, [Jung-Woo Ha](https://www.facebook.com/jungwoo.ha.921)<br>
 > In CVPR 2020. (* indicates equal contribution)<br>
-
-> Paper: https://arxiv.org/abs/1912.01865<br>
-> Video: https://youtu.be/0EVh5Ki4dIY<br>
-
-> **TensorFlow implementation**<br>
-> The TensorFlow implementation of StarGAN v2 by junho can be found at [clovaai/stargan-v2-tensorflow](https://github.com/clovaai/stargan-v2-tensorflow).
 
 ## Software installation
 Clone this repository:
