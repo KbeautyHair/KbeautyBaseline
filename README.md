@@ -1,6 +1,6 @@
 ## Backbone model: StarGAN v2
 > **Paper**<br>
-> StarGAN v2: Diverse Image Synthesis for Multiple Domains [link](https://arxiv.org/abs/1912.01865)<br>
+> StarGAN v2: Diverse Image Synthesis for Multiple Domains [paper link](https://arxiv.org/abs/1912.01865)<br>
 > [Yunjey Choi](https://github.com/yunjey)\*, [Youngjung Uh](https://github.com/youngjung)\*, [Jaejun Yoo](http://jaejunyoo.blogspot.com/search/label/kr)\*, [Jung-Woo Ha](https://www.facebook.com/jungwoo.ha.921)<br>
 > In CVPR 2020. (* indicates equal contribution)<br>
 
