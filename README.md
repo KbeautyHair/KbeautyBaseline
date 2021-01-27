@@ -50,7 +50,7 @@ python main.py --mode eval --img_size 512 --num_domains 2 --w_hpf 0 \
                --train_img_dir data/mqset \
                --val_img_dir data/mqset \
                --checkpoint_dir expr/checkpoints/k-hairstyle \
-               --eval_dir expr/eval/k-hairstyle --dataset_dir datasets
+               --eval_dir expr/eval/k-hairstyle --dataset_dir imagelists
 ```
 
 ## Training networks
@@ -60,7 +60,7 @@ To train the baseline model from scratch, run the following commands. Generated 
 python main.py --mode train --img_size 512 --num_domains 2 --w_hpf 0 \
                --lambda_reg 1 --lambda_sty 2 --lambda_ds 1 --lambda_cyc 2 \
                --batch_size 5 --val_batch_size 30 \
-               --train_img_dir data/mqset --val_img_dir data/mqset --dataset_dir datasets \
+               --train_img_dir data/mqset --val_img_dir data/mqset --dataset_dir imagelists \
                --checkpoint_dir expr/checkpoints/k-hairstyle --eval_dir expr/eval/k-hairstyle --sample_dir expr/samples/k-hairstyle
 ```
 
