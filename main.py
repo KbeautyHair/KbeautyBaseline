@@ -74,7 +74,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # model arguments
-    parser.add_argument('--img_size', type=int, default=256,
+    parser.add_argument('--img_size', type=int, default=512,
                         help='Image resolution')
     parser.add_argument('--num_domains', type=int, default=2,
                         help='Number of domains')
@@ -88,15 +88,15 @@ if __name__ == '__main__':
     # weight for objective functions
     parser.add_argument('--lambda_reg', type=float, default=1,
                         help='Weight for R1 regularization')
-    parser.add_argument('--lambda_cyc', type=float, default=1,
+    parser.add_argument('--lambda_cyc', type=float, default=2,
                         help='Weight for cyclic consistency loss')
-    parser.add_argument('--lambda_sty', type=float, default=1,
+    parser.add_argument('--lambda_sty', type=float, default=2,
                         help='Weight for style reconstruction loss')
     parser.add_argument('--lambda_ds', type=float, default=1,
                         help='Weight for diversity sensitive loss')
     parser.add_argument('--ds_iter', type=int, default=100000,
                         help='Number of iterations to optimize diversity sensitive loss')
-    parser.add_argument('--w_hpf', type=float, default=1,
+    parser.add_argument('--w_hpf', type=float, default=0,
                         help='weight for high-pass filtering')
 
     # training arguments
@@ -131,39 +131,39 @@ if __name__ == '__main__':
                         help='Seed for random number generator')
 
     # directory for training
-    parser.add_argument('--train_img_dir', type=str, default='mqset',
+    parser.add_argument('--train_img_dir', type=str, default='data/mqset',
                         help='Directory containing training images')
-    parser.add_argument('--val_img_dir', type=str, default='mqset',
+    parser.add_argument('--val_img_dir', type=str, default='data/mqset',
                         help='Directory containing validation images')
-    parser.add_argument('--test_img_dir', type=str, default='mqset',
+    parser.add_argument('--test_img_dir', type=str, default='data/mqset',
                         help='Directory containing test images')
-    parser.add_argument('--sample_dir', type=str, default='expr/samples',
+    parser.add_argument('--sample_dir', type=str, default='expr/samples/k-hairstyle',
                         help='Directory for saving generated images')
-    parser.add_argument('--checkpoint_dir', type=str, default='expr/checkpoints/kbeauty',
+    parser.add_argument('--checkpoint_dir', type=str, default='expr/checkpoints/k-hairstyle',
                         help='Directory for saving network checkpoints')
     parser.add_argument('--dataset_dir', type=str, default='datasets',
-                        help='Directory of image lists (npy files)')
+                        help='Directory of train, valid image lists (npy files)')
 
     # directory for calculating metrics
-    parser.add_argument('--eval_dir', type=str, default='expr/eval',
+    parser.add_argument('--eval_dir', type=str, default='expr/eval/k-hairstyle',
                         help='Directory for saving metrics, i.e., FID and LPIPS')
 
     # directory for testing
-    parser.add_argument('--result_dir', type=str, default='expr/results',
-                        help='Directory for saving generated images and videos')
+    parser.add_argument('--result_dir', type=str, default='expr/results/k-hairstyle',
+                        help='Directory for saving generated images')
     parser.add_argument('--src_dir', type=str, default='sample_images/src',
                         help='Directory containing input source images')
     parser.add_argument('--ref_dir', type=str, default='sample_images/ref',
                         help='Directory containing input reference images')
 
     parser.add_argument('--src_domain', type=int, default=0,
-                        help='Source domain')
+                        help='Source domain (e.g., 0, 1)')
     parser.add_argument('--trg_domain', type=int, default=1,
-                        help='Target domain')
+                        help='Target domain (e.g., 0, 1)')
     parser.add_argument('--num_sample', type=int, default=300,
                         help='Number of samples to generate')
 
-    # face alignment
+    # face alignment (not used in k-hairstyle baseline)
     parser.add_argument('--wing_path', type=str, default='expr/checkpoints/wing.ckpt')
     parser.add_argument('--lm_path', type=str, default='expr/checkpoints/celeba_lm_mean.npz')
 
