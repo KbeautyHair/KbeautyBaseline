@@ -46,7 +46,7 @@ python main.py --mode sample --img_size 512 --num_domains 2 --resume_iter 60000 
 To evaluate the baseline model using [Fr&eacute;chet Inception Distance (FID)](https://arxiv.org/abs/1706.08500), run the following commands:
 ```bash
 python main.py --mode eval --img_size 512 --num_domains 2 --w_hpf 0 \
-               --resume_iter 60000 --num_sample 2000 --val_batch_size 50 \        
+               --resume_iter 60000 --num_sample 1000 --val_batch_size 50 \        
                --train_img_dir data/mqset \
                --val_img_dir data/mqset \
                --checkpoint_dir expr/checkpoints/k-hairstyle \
