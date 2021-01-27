@@ -4,8 +4,8 @@
 > [Yunjey Choi](https://github.com/yunjey)\*, [Youngjung Uh](https://github.com/youngjung)\*, [Jaejun Yoo](http://jaejunyoo.blogspot.com/search/label/kr)\*, [Jung-Woo Ha](https://www.facebook.com/jungwoo.ha.921)<br>
 > In CVPR 2020. (* indicates equal contribution)<br>
 
-> **Official implementation (Pytorch) **<br>
-> https://github.com/clovaai/stargan-v2<br>
+> **Official implementation in Pytorch**<br>
+> The official implementation in Pytorch of StarGAN v2 can be found at [clovaai/stargan-v2](https://github.com/clovaai/stargan-v2)<br>
 
 > **TensorFlow implementation**<br>
 > The TensorFlow implementation of StarGAN v2 by our team member junho can be found at [clovaai/stargan-v2-tensorflow](https://github.com/clovaai/stargan-v2-tensorflow).
