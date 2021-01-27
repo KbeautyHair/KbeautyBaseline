@@ -1,1 +1,0 @@
-python main.py --mode eval --img_size 512 --num_sample 1000 --resume_iter 60000 --val_batch_size 50 --num_domains 2 --w_hpf 0 --lambda_reg 1 --lambda_sty 2 --lambda_ds 1 --lambda_cyc 2 --train_img_dir /mqset --val_img_dir /mqset --checkpoint_dir expr/checkpoints/kbeauty --eval_dir expr/eval --dataset_dir datasets
