@@ -54,7 +54,7 @@ python main.py --mode eval --img_size 512 --num_domains 2 --w_hpf 0 \
 ```
 
 ## Training networks
-To train the baseline model from scratch, run the following commands. Generated images and network checkpoints will be stored in the `expr/samples` and `expr/checkpoints` directories, respectively. Training takes about three days on a single Tesla V100 GPU. Please see [here](https://github.com/KbeautyHair/KbeautyBaseline/blob/master/main.py#L86-L179) for training arguments and a description of them in the original StarGAN v2 implementation.
+To train the baseline model from scratch, run the following commands. Generated images and network checkpoints will be stored in the `expr/samples` and `expr/checkpoints` directories, respectively. Training takes about three days on a single Tesla V100 GPU. Please see [here](https://github.com/KbeautyHair/KbeautyBaseline/blob/master/main.py#L22-L122) for training arguments and a description of them.
 
 ```bash
 python main.py --mode train --img_size 512 --num_domains 2 --w_hpf 0 \
