@@ -70,7 +70,7 @@ python main.py --mode train --img_size 512 --num_domains 2 --w_hpf 0 \
 
 ## Reference
 If you want to get more details of the original model Stargan v2, [this repository](https://github.com/clovaai/stargan-v2) will be useful.
-The source code, pre-trained models are available under [Creative Commons BY-NC 4.0](https://github.com/clovaai/stargan-v2/blob/master/LICENSE) license by NAVER Corporation. You can **use, copy, tranform and build upon** the material for **non-commercial purposes** as long as you give **appropriate credit** by citing our paper, and indicate if changes were made. 
+The source code, pre-trained models of StarGAN v2 are available under [Creative Commons BY-NC 4.0](https://github.com/clovaai/stargan-v2/blob/master/LICENSE) license by NAVER Corporation. You can **use, copy, tranform and build upon** the material for **non-commercial purposes** as long as you give **appropriate credit** by citing our paper, and indicate if changes were made. 
 
 ## Contact
 For business inquiries, please contact yuryueng@gmail.com or valther.ppk@gmail.com.<br/>	
