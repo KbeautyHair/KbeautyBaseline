@@ -29,9 +29,9 @@ pip install pillow==7.0.0 scipy==1.2.1 tqdm==4.43.0 munch==2.5.0
 ```
 
 ## Datasets and pre-trained networks
-We provide a script to download K-hairstyle dataset we used to train the baseline model and the corresponding pre-trained weights. The datasets and network checkpoints will be downloaded and stored in the `data` and `expr/checkpoints` directories, respectively.
+We provide a script to download K-hairstyle dataset we used to train the baseline model and the corresponding pre-trained weights. The datasets and checkpoints of the pre-trained weights will be downloaded and stored in the `data` and `expr/checkpoints` directories, respectively.
 
-To download the [K-hairstyle](link) dataset and the [pre-trained weights](link), run the following commands:
+To download the [K-hairstyle](link) dataset and the [pre-trained weights](https://drive.google.com/file/d/1EYbJCUZBITAer2jscfguL3lNFZNMSaVy/view?usp=sharing), run the following commands:
 ```bash
 bash download.sh k-hairstyle-dataset
 bash download.sh pretrained-network-k-hairstyle
