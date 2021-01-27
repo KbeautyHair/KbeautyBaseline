@@ -42,19 +42,19 @@ After downloading the pre-trained networks, you can synthesize output images ref
 To generate images, run the following command:
 ```bash
 python main.py --mode sample --img_size 512 --num_domains 2 --resume_iter 60000 --w_hpf 0 \
-               --checkpoint_dir expr/checkpoints --result_dir expr/results \
-               --trg_domain 1 --src_dir sample_images/src --ref_dir sample_images/ref               
+               --checkpoint_dir expr/checkpoints/k-hairstyle --result_dir expr/results/k-hairstyle \
+               --trg_domain [TARGET DOMAIN (e.g., 0)] --src_dir sample_images/src --ref_dir sample_images/ref               
 ```
 
 ## Evaluation metrics
 To evaluate the baseline model using [Fr&eacute;chet Inception Distance (FID)](https://arxiv.org/abs/1706.08500), run the following commands:
 ```bash
-python main.py --mode eval --num_domains 2 --w_hpf 1 \
-               --resume_iter 100000 \
-               --train_img_dir data/celeba_hq/train \
-               --val_img_dir data/celeba_hq/val \
-               --checkpoint_dir expr/checkpoints/celeba_hq \
-               --eval_dir expr/eval/celeba_hq
+python main.py --mode eval --img_size 512 --num_domains 2 --w_hpf 0 \
+               --resume_iter 60000 --num_sample 2000 --val_batch_size 50 \        
+               --train_img_dir data/mqset \
+               --val_img_dir data/mqset \
+               --checkpoint_dir expr/checkpoints/k-hairstyle \
+               --eval_dir expr/eval/k-hairstyle --dataset_dir datasets
 ```
 
 ## Training networks
@@ -65,7 +65,7 @@ python main.py --mode train --img_size 512 --num_domains 2 --w_hpf 0 \
                --lambda_reg 1 --lambda_sty 2 --lambda_ds 1 --lambda_cyc 2 \
                --batch_size 5 --val_batch_size 30 \
                --train_img_dir data/mqset --val_img_dir data/mqset --dataset_dir datasets \
-               --checkpoint_dir expr/checkpoints/ --eval_dir expr/eval --sample_dir expr/samples
+               --checkpoint_dir expr/checkpoints/k-hairstyle --eval_dir expr/eval/k-hairstyle --sample_dir expr/samples/k-hairstyle
 ```
 
 ## License
