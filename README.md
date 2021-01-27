@@ -5,7 +5,7 @@
 > In CVPR 2020. (* indicates equal contribution)<br>
 
 > **Official implementation in Pytorch**<br>
-> The official implementation in Pytorch of StarGAN v2 can be found at [clovaai/stargan-v2](https://github.com/clovaai/stargan-v2)<br>
+> The official Pytorch implementation of StarGAN v2 can be found at [clovaai/stargan-v2](https://github.com/clovaai/stargan-v2)<br>
 
 > **TensorFlow implementation**<br>
 > The TensorFlow implementation of StarGAN v2 by our team member junho can be found at [clovaai/stargan-v2-tensorflow](https://github.com/clovaai/stargan-v2-tensorflow).
