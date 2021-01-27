@@ -11,7 +11,7 @@ Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 FILE=$1
 
 if [ $FILE == "pretrained-network-k-hairstyle" ]; then
-    URL=
+    URL=https://drive.google.com/file/d/1EYbJCUZBITAer2jscfguL3lNFZNMSaVy/view?usp=sharing
     ZIP_FILE=./expr/checkpoints/k-hairstyle.zip
     mkdir -p ./expr/checkpoints
     wget -N $URL -O $ZIP_FILE
