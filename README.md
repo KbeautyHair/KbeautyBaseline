@@ -23,11 +23,11 @@ Install the dependencies:
 conda create -n KbeautyBaseline python=3.6.7
 conda activate KbeautyBaseline
 ```
-<CUDA version 10.0>
+* CUDA version 10.0
 ```bash
 conda install -y pytorch=1.6.0 torchvision=0.7.0 cudatoolkit=10.0 -c pytorch
 ```
-<CUDA version 11.0>
+* CUDA version 11.0
 ```bash
 conda install -y pytorch=1.6.0 torchvision=0.7.0 cudatoolkit=11.0 -c pytorch
 ```
